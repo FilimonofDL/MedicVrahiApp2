@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:shape="rectangle">
+
+    <solid android:color="@color/chat_sery_vrah" />
+
+    <corners
+        android:bottomLeftRadius="@dimen/zakruglTV"
+        android:bottomRightRadius="@dimen/zakruglTV"
+        android:topLeftRadius="@dimen/zakruglTV"
+        android:topRightRadius="@dimen/zakruglTV"
+        android:strokeWidth="72"/>
+
+</shape>

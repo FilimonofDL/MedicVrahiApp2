@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/talonhika_margin">
+
+    <TextView
+        android:id="@+id/tvVremiaTalonhika"
+        android:layout_width="@dimen/talohhika_shirina"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/backgrbelizakrugl"
+        android:gravity="center"
+        android:paddingBottom="@dimen/talonhika_margin"
+        android:paddingEnd="@dimen/talonhika_margin"
+        android:paddingStart="@dimen/talonhika_margin"
+        android:paddingTop="@dimen/talonhika_margin"
+        android:text="10:00"
+        android:textColor="@color/fon_bottom"
+        android:textSize="@dimen/shrift_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

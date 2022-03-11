@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/vosemdp"
+    android:layout_marginStart="@dimen/vosemdp"
+    android:layout_marginTop="@dimen/vosemdp"
+    android:background="@color/razdelenie_panelek">
+
+</android.support.constraint.ConstraintLayout>

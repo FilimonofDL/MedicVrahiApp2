@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/conEditPof"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".f_profil.EditUserInfoActivity">
+
+    <ProgressBar
+        android:id="@+id/prEditProfil"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/include14"
+        layout="@layout/bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        app:layout_constraintBottom_toTopOf="@+id/include14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etTelefonIzmenit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:hint="@string/telefon"
+                android:inputType="textPersonName|phone"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ivVraha"
+                app:layout_constraintTop_toBottomOf="@+id/etFamiliaIzmenit" />
+
+            <Button
+                android:id="@+id/btSaveIzmenitInfoUser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/backgrbelizakrugl_primar_color"
+                android:onClick="profilEditSaveClick"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etStajIzmenit" />
+
+            <EditText
+                android:id="@+id/etImiaIzmenit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ivVraha"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tvDateIzmenitRojdenie"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etTelefonIzmenit" />
+
+            <EditText
+                android:id="@+id/etOthestvoIzmenit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/othestvo"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/etImiaIzmenit"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/etImiaIzmenit"
+                app:layout_constraintTop_toBottomOf="@+id/etImiaIzmenit" />
+
+            <EditText
+                android:id="@+id/etFamiliaIzmenit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/familia"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/etImiaIzmenit"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etImiaIzmenit"
+                app:layout_constraintTop_toBottomOf="@+id/etOthestvoIzmenit" />
+
+            <ImageView
+                android:id="@+id/ivVraha"
+                android:layout_width="@dimen/avatar_foto"
+                android:layout_height="@dimen/avatar_foto"
+                android:layout_marginTop="8dp"
+                android:onClick="ivFotoVrahaClick"
+                android:src="@drawable/ic_android_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/spSpecialnost"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etImiaIzmenit" />
+
+            <Spinner
+                android:id="@+id/spSpecialnost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/etFamiliaIzmenit"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etFamiliaIzmenit"
+                app:layout_constraintTop_toBottomOf="@+id/etFamiliaIzmenit" />
+
+            <EditText
+                android:id="@+id/etObrazovanieIzmenit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/obrazovanie"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="@+id/spSpecialnost"
+                app:layout_constraintStart_toStartOf="@+id/spSpecialnost"
+                app:layout_constraintTop_toBottomOf="@+id/spSpecialnost" />
+
+            <EditText
+                android:id="@+id/etStajIzmenit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/Staj"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="@+id/etImiaIzmenit"
+                app:layout_constraintStart_toStartOf="@+id/etImiaIzmenit"
+                app:layout_constraintTop_toBottomOf="@+id/etObrazovanieIzmenit" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

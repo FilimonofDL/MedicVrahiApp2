@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".b_taloni.TalonhikiSozdat">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include
+            layout="@layout/bottom_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/daily_fragment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="25dp">
+
+
+            <include
+                android:id="@+id/include4"
+                layout="@layout/calendar_view_exp_main_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/conVseTalonhiki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include4">
+
+                <ProgressBar
+                    android:id="@+id/progresZagruzkaTalonhikov"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="27dp" />
+
+                <LinearLayout
+                    android:id="@+id/linDliaRiadaTalonhikov"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/vosemdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="0dp"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvNahaloPriema"
+                    style="@style/opisaniTexta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/backgrbelizakrugl"
+                    android:paddingBottom="@dimen/vosemdp"
+                    android:paddingTop="@dimen/vosemdp"
+                    android:text="TextView"
+                    android:textColor="@color/chat_sery_vrah"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linDliaRiadaTalonhikov" />
+
+                <EditText
+                    android:id="@+id/etIntervalMinutZapisi"
+                    android:layout_width="@dimen/otstup_ot_kartinok"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/interval"
+                    android:inputType="textPersonName|number"
+                    app:layout_constraintEnd_toStartOf="@+id/btDobavit"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNahaloPriema" />
+
+                <EditText
+                    android:id="@+id/etKolihTalonovDobavit"
+                    android:layout_width="@dimen/otstup_ot_kartinok"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/skolko_dobavit"
+                    android:inputType="textPersonName|number"
+                    app:layout_constraintEnd_toEndOf="@+id/etIntervalMinutZapisi"
+                    app:layout_constraintTop_toBottomOf="@+id/etIntervalMinutZapisi" />
+
+                <Button
+                    android:id="@+id/btDobavit"
+                    style="@style/knopki_orang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/dobavit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/etIntervalMinutZapisi" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="right"
+                    android:text="@string/interval"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/etIntervalMinutZapisi"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/etIntervalMinutZapisi" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="right"
+                    android:text="@string/skolko_dobavit"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/etKolihTalonovDobavit"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/etKolihTalonovDobavit" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

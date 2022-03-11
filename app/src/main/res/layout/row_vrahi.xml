@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/ivFotoVraha"
+        android:layout_width="@dimen/otstup_ot_kartinok"
+        android:layout_height="@dimen/otstup_ot_kartinok"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_android_black_24dp" />
+
+    <TextView
+        android:id="@+id/tvImiaVraha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="@dimen/shrift_3"
+        app:layout_constraintBottom_toTopOf="@+id/tvFamiliaVraha"
+        app:layout_constraintStart_toEndOf="@+id/ivFotoVraha"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvOthestvoVraha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="@dimen/shrift_3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvImiaVraha"
+        app:layout_constraintStart_toEndOf="@+id/tvImiaVraha" />
+
+    <TextView
+        android:id="@+id/tvFamiliaVraha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/shrift_3"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/tvImiaVraha"
+        app:layout_constraintTop_toBottomOf="@+id/tvImiaVraha" />
+
+    <TextView
+        android:id="@+id/tvSpecialnostVraha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/tvFamiliaVraha"
+        app:layout_constraintTop_toBottomOf="@+id/tvFamiliaVraha" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/otstup_visota"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivFotoVraha"
+        app:layout_constraintTop_toBottomOf="@+id/tvSpecialnostVraha"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@color/razdelenie_panelek" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,81 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/conCalMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical"
+    tools:context=".mcalendarview.ExpMainActivity">
+
+
+    <ImageView
+        android:id="@+id/main_expandIV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_forum_black_24dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ccc" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#a677bd"
+        android:onClick="TravelToClick"
+        android:text="travelto test"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/main_YYMM_Tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical|center"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_expandIV" />
+
+    <com.medic.medicvrahiapp.mcalendarview.WeekColumnView
+        android:id="@+id/weekColumnView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/main_YYMM_Tv"
+        app:layout_constraintStart_toStartOf="@+id/main_YYMM_Tv"
+        app:layout_constraintTop_toBottomOf="@+id/main_YYMM_Tv" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ccc"
+        app:layout_constraintTop_toBottomOf="@+id/weekColumnView3"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.medic.medicvrahiapp.mcalendarview.ExpCalendarView
+        android:id="@+id/calendar_exp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/weekColumnView3"
+        app:layout_constraintStart_toStartOf="@+id/weekColumnView3"
+        app:layout_constraintTop_toBottomOf="@+id/view6"
+        tools:context=".MainActivityCalen" />
+
+</android.support.constraint.ConstraintLayout>

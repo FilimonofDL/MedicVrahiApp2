@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar"
+    tools:context=".f_profil.ProfilInfoActivity">
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/include3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="355dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/tvViyti"
+            style="@style/opisaniTextaSLevogoKraya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:onClick="viytiIzAccount"
+            android:text="@string/viyti"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ivEditProfilInfo"
+            app:layout_constraintTop_toBottomOf="@+id/tvIzmenit" />
+
+        <ImageView
+            android:id="@+id/ivViytiIzSistemi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:onClick="viytiIzAccount"
+            app:layout_constraintBottom_toBottomOf="@+id/tvViyti"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvViyti"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_exit" />
+
+        <TextView
+            android:id="@+id/tvIzmenit"
+            style="@style/opisaniTextaSLevogoKraya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:onClick="editProfilClick"
+            android:text="@string/redactirovat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ivEditProfilInfo"
+            app:layout_constraintTop_toBottomOf="@+id/tvStaj" />
+
+        <ImageView
+            android:id="@+id/ivEditProfilInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:onClick="editProfilClick"
+            app:layout_constraintBottom_toBottomOf="@+id/tvIzmenit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvIzmenit"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/ivProfilInfo"
+            android:layout_width="@dimen/avatar_foto"
+            android:layout_height="@dimen/avatar_foto"
+            android:layout_marginStart="16dp"
+            android:background="#00ff4081"
+            app:layout_constraintBottom_toBottomOf="@+id/tvObrazovanie"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvFIOuser"
+            app:srcCompat="@drawable/ic_android_black_24dp" />
+
+        <TextView
+            android:id="@+id/tvFIOuser"
+            style="@style/KrupnoeSLevogoKraya"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
+            android:text="FIO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ivProfilInfo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvObrazovanie"
+            style="@style/KrupnoeSLevogoKraya"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="24dp"
+            android:gravity="left"
+            android:text="Date"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvFIOuser"
+            app:layout_constraintTop_toBottomOf="@+id/tvTelUser" />
+
+        <TextView
+            android:id="@+id/tvTelUser"
+            style="@style/KrupnoeSLevogoKraya"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="24dp"
+            android:gravity="left"
+            android:text="Tel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvFIOuser"
+            app:layout_constraintTop_toBottomOf="@+id/tvFIOuser" />
+
+        <TextView
+            android:id="@+id/tvStaj"
+            style="@style/KrupnoeSLevogoKraya"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:text="As"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvFIOuser"
+            app:layout_constraintTop_toBottomOf="@+id/tvObrazovanie" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
